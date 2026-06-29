@@ -1,5 +1,8 @@
 package net.MaouGaukken.CreateMechanisms.Compiler;
 
+import net.MaouGaukken.CreateMechanisms.AddonsMananger.SearchContent;
+import net.MaouGaukken.CreateMechanisms.Compiler.AddonsCompiler.AeItens;
+import net.MaouGaukken.CreateMechanisms.Config;
 import net.MaouGaukken.CreateMechanisms.Item.InconpleteMechanism.*;
 import net.MaouGaukken.CreateMechanisms.Item.Mechanism.*;
 import net.MaouGaukken.CreateMechanisms.Item.Parts.*;
@@ -7,6 +10,7 @@ import net.MaouGaukken.CreateMechanisms.Item.Tols.*;
 import net.MaouGaukken.CreateMechanisms.Item.Resources.*;
 import net.MaouGaukken.CreateMechanisms.CreateMechanisms;
 import net.minecraft.world.item.Item;
+import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -19,7 +23,6 @@ public class ModItems {
     public static final DeferredItem<Item> ADVANCED_PRECISION_MECHANISM = REGISTRY.register("advanced_precision_mechanism", AdvancedPrecisionMechanismItem::new);
     public static final DeferredItem<Item> HEAT_MECHANISM = REGISTRY.register("heat_mechanism", HeatMechanismItem::new);
     public static final DeferredItem<Item> ZINC_MECHANISM = REGISTRY.register("zinc_mechanism", ZincMechanismItem::new);
-    public static final DeferredItem<Item> COMPUTING_MECHANISM = REGISTRY.register("computing_mechanism", ComputingMechanismItem::new);
     public static final DeferredItem<Item> ENDER_MECHANISM = REGISTRY.register("ender_mechanism", EnderMechanismItem::new);
     public static final DeferredItem<Item> REDSTONE_MECHANISM = REGISTRY.register("redstone_mechanism", RedstoneMechanismItem::new);
     public static final DeferredItem<Item> BASIC_ENERGY_MECHANISM = REGISTRY.register("basic_energy_mechanism", BasicEnergyMechanismItem::new);
@@ -34,7 +37,6 @@ public class ModItems {
     public static final DeferredItem<Item> INCOMPLETE_HEAT_MECHANISM = REGISTRY.register("incomplete_heat_mechanism", IncompleteHeatMechanismItem::new);
     public static final DeferredItem<Item> INCOMPLETE_ZINC_MECHANISM = REGISTRY.register("incomplete_zinc_mechanism", IncompleteZincMechanismItem::new);
     public static final DeferredItem<Item> INCOMPLETE_ADVANCED_PRECISION_MECHANISM = REGISTRY.register("incomplete_advanced_precision_mechanism", IncompleteAdvancedPrecisionMechanismItem::new);
-    public static final DeferredItem<Item> INCOMPLETE_COMPUTING_MECHANISM = REGISTRY.register("incomplete_computing_mechanism", IncompleteComputingMechanismItem::new);
     public static final DeferredItem<Item> INCOMPLETE_ENDER_MECHANISM = REGISTRY.register("incomplete_ender_mechanism", IncompleteEnderMechanismItem::new);
     public static final DeferredItem<Item> INCOMPLETE_REDSTONE_MECHANISM = REGISTRY.register("incomplete_redstone_mechanism", IncompleteRedstoneMechanismItem::new);
     public static final DeferredItem<Item> INCOMPLETE_BASIC_ENERGY_MECHANISM = REGISTRY.register("incomplete_basic_energy_mechanism", IncompleteBasicEnergyMechanismItem::new);
@@ -63,4 +65,6 @@ public class ModItems {
     public static final DeferredItem<SawItem> DIAMOND_SAW = REGISTRY.register("diamond_saw",
             () -> new SawItem(ModToolTiers.MODIFIED_DIAMOND, new Item.Properties().attributes(
                     SawItem.createAttributes(ModToolTiers.MODIFIED_DIAMOND, 6.0F, -3.1F))));
+
+
 }

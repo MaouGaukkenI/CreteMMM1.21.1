@@ -1,5 +1,8 @@
 package net.MaouGaukken.CreateMechanisms.Compiler;
 
+import net.MaouGaukken.CreateMechanisms.AddonsMananger.SearchContent;
+import net.MaouGaukken.CreateMechanisms.Compiler.AddonsCompiler.AeItens;
+import net.MaouGaukken.CreateMechanisms.Config;
 import net.MaouGaukken.CreateMechanisms.CreateMechanisms;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -26,12 +29,12 @@ public class ModTabs {
                     .title(Component.translatable("item_group.createmechanisms.mechanisms"))
                     .icon(() -> new ItemStack(ModItems.WOODEN_MECHANISM.get()))
                     .displayItems((parameters, tabData) -> {
+                        SearchContent search = new SearchContent();
                         tabData.accept(ModItems.WOODEN_MECHANISM.get());
                         tabData.accept(ModItems.RUBBER_MECHANISM.get());
                         tabData.accept(ModItems.ADVANCED_PRECISION_MECHANISM.get());
                         tabData.accept(ModItems.HEAT_MECHANISM.get());
                         tabData.accept(ModItems.ZINC_MECHANISM.get());
-                        tabData.accept(ModItems.COMPUTING_MECHANISM.get());
                         tabData.accept(ModItems.ENDER_MECHANISM.get());
                         tabData.accept(ModItems.REDSTONE_MECHANISM.get());
                         tabData.accept(ModItems.BASIC_ENERGY_MECHANISM.get());
@@ -39,6 +42,13 @@ public class ModTabs {
                         tabData.accept(ModItems.GOLDEN_ENERGY_MECHANISM.get());
                         tabData.accept(ModItems.DIAMOND_ENERGY_MECHANISM.get());
                         tabData.accept(ModItems.ENDERIAM_ENERGY_MECHANISM.get());
+                        if(!Config.REQUIRES_ADDONS.get()){
+                            tabData.accept(AeItens.COMPUTING_MECHANISM.get());
+                        }else{
+                            if(search.HaveModId("ae2")){
+                                tabData.accept(AeItens.COMPUTING_MECHANISM.get());
+                            }
+                        }
                     }).build());
 
     /**
