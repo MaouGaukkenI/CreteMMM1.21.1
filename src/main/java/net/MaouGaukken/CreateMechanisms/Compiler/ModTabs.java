@@ -1,7 +1,9 @@
 package net.MaouGaukken.CreateMechanisms.Compiler;
 
 import net.MaouGaukken.CreateMechanisms.AddonsMananger.SearchContent;
-import net.MaouGaukken.CreateMechanisms.Compiler.AddonsCompiler.AeItens;
+import net.MaouGaukken.CreateMechanisms.Compiler.AddonsCompiler.SourceMechanismItem;
+import net.MaouGaukken.CreateMechanisms.Compiler.AddonsCompiler.ComputingMechanismItem;
+import net.MaouGaukken.CreateMechanisms.Compiler.Fluid.ModFluidItem;
 import net.MaouGaukken.CreateMechanisms.Config;
 import net.MaouGaukken.CreateMechanisms.CreateMechanisms;
 import net.minecraft.core.registries.Registries;
@@ -30,6 +32,7 @@ public class ModTabs {
                     .icon(() -> new ItemStack(ModItems.WOODEN_MECHANISM.get()))
                     .displayItems((parameters, tabData) -> {
                         SearchContent search = new SearchContent();
+                        AddonsIds ids = new AddonsIds();
                         tabData.accept(ModItems.WOODEN_MECHANISM.get());
                         tabData.accept(ModItems.RUBBER_MECHANISM.get());
                         tabData.accept(ModItems.ADVANCED_PRECISION_MECHANISM.get());
@@ -42,11 +45,16 @@ public class ModTabs {
                         tabData.accept(ModItems.GOLDEN_ENERGY_MECHANISM.get());
                         tabData.accept(ModItems.DIAMOND_ENERGY_MECHANISM.get());
                         tabData.accept(ModItems.ENDERIAM_ENERGY_MECHANISM.get());
+                        tabData.accept(ModItems.NETHERITE_ENERGY_MECHANISM);
                         if(!Config.REQUIRES_ADDONS.get()){
-                            tabData.accept(AeItens.COMPUTING_MECHANISM.get());
+                            tabData.accept(ComputingMechanismItem.COMPUTING_MECHANISM.get());
+                            tabData.accept(SourceMechanismItem.SOURCE_MECHANISM.get());
                         }else{
-                            if(search.HaveModId("ae2")){
-                                tabData.accept(AeItens.COMPUTING_MECHANISM.get());
+                            if(ids._2() || ids._19() || ids._22()){
+                                tabData.accept(ComputingMechanismItem.COMPUTING_MECHANISM.get());
+                            }
+                            if(ids._3()){
+                                tabData.accept(SourceMechanismItem.SOURCE_MECHANISM.get());
                             }
                         }
                     }).build());
@@ -66,7 +74,7 @@ public class ModTabs {
                         tabData.accept(ModItems.CURED_RUBBER.get());
                         tabData.accept(ModItems.RUBBER.get());
                         tabData.accept(ModItems.BRONZE.get());
-                        tabData.accept(ModItems.ENDERIAM_BUCKET.get());
+                        tabData.accept(ModFluidItem.ENDERIAM_BUCKET.get());
                         tabData.accept(ModItems.COPPER_SAW.get());
                         tabData.accept(ModItems.IRON_SAW.get());
                         tabData.accept(ModItems.DIAMOND_SAW.get());

@@ -19,6 +19,8 @@
   "item.createmechanisms.incomplete_zinc_mechanism": "Incomplete Zinc Mechanism",
   "item.createmechanisms.redstone_mechanism": "Redstone Mechanism",
   "item.createmechanisms.incomplete_redstone_mechanism": "Incomplete Redstone Mechanism",
+  "item.createmechanisms.source_mechanism": "Source Mechanism",
+  "item.createmechanisms.incomplete_source_mechanism": "Incomplete Source Mechanism",
   "_titulo3" : "Mecanismos de Energia",
   "item.createmechanisms.basic_energy_mechanism": "Basic Energy Mechanism",
   "item.createmechanisms.incomplete_basic_energy_mechanism": "Incomplete Basic Energy Mechanism",
@@ -30,6 +32,8 @@
   "item.createmechanisms.incomplete_diamond_energy_mechanism": "Incomplete Diamond Energy Mechanism",
   "item.createmechanisms.enderiam_energy_mechanism": "Enderiam Energy Mechanism",
   "item.createmechanisms.incomplete_enderiam_energy_mechanism": "Incomplete Enderiam Energy Mechanism",
+  "item.createmechanisms.netherite_energy_mechanism": "Netherite Energy Mechanism",
+  "item.createmechanisms.incomplete_netherite_energy_mechanism": "Incomplete Netherite Energy Mechanism",
   "_titulo4" : "Itens Extras",
   "item.createmechanisms.energy_cell": "Energy Cell",
   "item.createmechanisms.enderiam_cell": "Enderiam Cell",
@@ -39,9 +43,9 @@
   "item.createmechanisms.copper_saw": "Copper Saw",
   "item.createmechanisms.iron_saw": "Iron Saw",
   "item.createmechanisms.diamond_saw": "Diamond Saw",
-  "item.createmechanisms.random_placer": "Random Placer",
   "item.createmechanisms.enderiam_bucket": "Enderiam Bucket",
-  "block.createmechanisms.enderiam": "Enderiam",
-  "fluid.createmechanisms.enderiam": "Enderiam",
-  "fluid_type.createmechanisms.enderiam": "Enderiam"
+  "block.createmechanisms.enderiam_block": "Enderiam",
+  "fluid.createmechanisms.enderiam_fluid": "Enderiam",
+  "fluid.createmechanisms.flowing_enderiam_fluid": "Enderiam",
+  "fluid_type.createmechanisms.enderiam_fluid": "Enderiam"
 }

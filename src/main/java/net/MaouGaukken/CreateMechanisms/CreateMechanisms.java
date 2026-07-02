@@ -1,14 +1,23 @@
 package net.MaouGaukken.CreateMechanisms;
 
+import net.MaouGaukken.CreateMechanisms.Compiler.AddonsCompiler.ComputingMechanismItem;
+import net.MaouGaukken.CreateMechanisms.Compiler.Fluid.Fluids.EnderiamFluid;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.bus.api.SubscribeEvent;
+
 import net.MaouGaukken.CreateMechanisms.AddonsMananger.EnableAddonRequirement;
 import net.MaouGaukken.CreateMechanisms.AddonsMananger.SearchContent;
 import net.MaouGaukken.CreateMechanisms.Compiler.*;
-import net.MaouGaukken.CreateMechanisms.Compiler.AddonsCompiler.AeItens;
-import org.slf4j.Logger;
-import com.mojang.logging.LogUtils;
+import net.MaouGaukken.CreateMechanisms.Compiler.AddonsCompiler.SourceMechanismItem;
+import net.MaouGaukken.CreateMechanisms.Compiler.Fluid.ModFluid;
+import net.MaouGaukken.CreateMechanisms.Compiler.Fluid.ModFluidItem;
 
+import net.MaouGaukken.CreateMechanisms.Compiler.Fluid.ModFluidsBlock;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.config.ModConfig;
 
@@ -17,8 +26,8 @@ import net.neoforged.fml.config.ModConfig;
 public class CreateMechanisms {
     EnableAddonRequirement addonRequirement = new EnableAddonRequirement();
     public static final String MOD_ID = "createmechanisms";
-    public static final Logger LOGGER = LogUtils.getLogger();
     SearchContent search = new SearchContent();
+    AddonsIds ids = new AddonsIds();
 
     public CreateMechanisms(IEventBus modEventBus, ModContainer modContainer) {
         // Registrar o arquivo de configuração do mod
@@ -26,21 +35,37 @@ public class CreateMechanisms {
 
         //Registers the mod's custom items and blocks
         ModItems.REGISTRY.register(modEventBus);
-        ModBlocks.REGISTRY.register(modEventBus);
 
-        //Records the fluids and fluid types of the mod
-        ModFluids.REGISTRY.register(modEventBus);
-        ModFluidTypes.REGISTRY.register(modEventBus);
+        //New mod Fluids
+        EnderiamFluid.register(modEventBus);
+        ModFluid.register(modEventBus);
+        ModFluidsBlock.register(modEventBus);
+        ModFluidItem.register(modEventBus);
 
         if(!addonRequirement.readAddonRequirement()){
-            AeItens.REGISTRY.register(modEventBus);
+            ComputingMechanismItem.REGISTRY.register(modEventBus);
+            SourceMechanismItem.REGISTRY.register(modEventBus);
         } else {
-            if (search.HaveModId("ae2")){
-                AeItens.REGISTRY.register(modEventBus);
+            if (ids._2()){
+                ComputingMechanismItem.REGISTRY.register(modEventBus);
+            }
+            if(ids._3()){
+                SourceMechanismItem.REGISTRY.register(modEventBus);
             }
         }
 
         ModTabs.REGISTRY.register(modEventBus);
     }
+
+    @EventBusSubscriber(modid = CreateMechanisms.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
+    public static class ClientModEvents {
+
+        @SubscribeEvent
+        public static void onClientSetup(FMLClientSetupEvent event) {
+            ItemBlockRenderTypes.setRenderLayer(ModFluid.SOURCE_ENDERIAM.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModFluid.FLOWING_ENDERIAM.get(), RenderType.translucent());
+        }
+    }
+
 }
 
