@@ -1,6 +1,5 @@
 package net.MaouGaukken.CreateMechanisms;
 
-import net.MaouGaukken.CreateMechanisms.Compiler.AddonsCompiler.ComputingMechanismItem;
 import net.MaouGaukken.CreateMechanisms.Compiler.Fluid.Fluids.EnderiamFluid;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -12,7 +11,6 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.MaouGaukken.CreateMechanisms.AddonsMananger.EnableAddonRequirement;
 import net.MaouGaukken.CreateMechanisms.AddonsMananger.SearchContent;
 import net.MaouGaukken.CreateMechanisms.Compiler.*;
-import net.MaouGaukken.CreateMechanisms.Compiler.AddonsCompiler.SourceMechanismItem;
 import net.MaouGaukken.CreateMechanisms.Compiler.Fluid.ModFluid;
 import net.MaouGaukken.CreateMechanisms.Compiler.Fluid.ModFluidItem;
 
@@ -41,18 +39,6 @@ public class CreateMechanisms {
         ModFluid.register(modEventBus);
         ModFluidsBlock.register(modEventBus);
         ModFluidItem.register(modEventBus);
-
-        if(!addonRequirement.readAddonRequirement()){
-            ComputingMechanismItem.REGISTRY.register(modEventBus);
-            SourceMechanismItem.REGISTRY.register(modEventBus);
-        } else {
-            if (ids._2()){
-                ComputingMechanismItem.REGISTRY.register(modEventBus);
-            }
-            if(ids._3()){
-                SourceMechanismItem.REGISTRY.register(modEventBus);
-            }
-        }
 
         ModTabs.REGISTRY.register(modEventBus);
     }

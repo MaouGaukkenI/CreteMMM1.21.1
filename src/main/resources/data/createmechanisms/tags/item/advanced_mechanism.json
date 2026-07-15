@@ -1,0 +1,9 @@
+{
+  "values": [
+    "createmechanisms:advanced_precision_mechanism",
+    "createmechanisms:advanced_storage_mechanism",
+    "createmechanisms:advanced_heat_mechanism",
+    "createmechanisms:advanced_fluid_mechanism",
+    "createmechanisms:advanced_experience_mechanism"
+  ]
+}

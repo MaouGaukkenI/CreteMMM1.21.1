@@ -1,0 +1,15 @@
+{
+  "values": [
+    "createmechanisms:basic_energy_mechanism",
+    "createmechanisms:iron_energy_mechanism",
+    "createmechanisms:golden_energy_mechanism",
+    "createmechanisms:diamond_energy_mechanism",
+    "createmechanisms:enderiam_energy_mechanism",
+    "createmechanisms:netherite_energy_mechanism",
+    "createmechanisms:hardened_energy_mechanism",
+    "createmechanisms:blazing_energy_mechanism",
+    "createmechanisms:niotic_energy_mechanism",
+    "createmechanisms:spirited_energy_mechanism",
+    "createmechanisms:nitro_energy_mechanism"
+  ]
+}

@@ -1,6 +1,6 @@
 {
-  "parent" : "minecraft:item/generated",
-  "textures" : {
-    "layer0" : "createmechanisms:item/netherite_energy_mechanism"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "createmechanisms:item/mechanism/netherite_energy_mechanism" 
   }
 }

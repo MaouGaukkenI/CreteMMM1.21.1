@@ -1,0 +1,9 @@
+{
+  "values": [
+    "createmechanisms:storage_mechanism",
+    "createmechanisms:advanced_storage_mechanism",
+    "createmechanisms:enderiam_storage_mechanism",
+    "createmechanisms:logic_mechanism",
+    "createmechanisms:computing_mechanism"
+  ]
+}

@@ -1,6 +1,6 @@
 {
-  "parent" : "minecraft:item/generated",
+  "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "createmechanisms:item/woodenmechanism"
+    "layer0": "createmechanisms:item/mechanism/wooden_mechanism" 
   }
 }

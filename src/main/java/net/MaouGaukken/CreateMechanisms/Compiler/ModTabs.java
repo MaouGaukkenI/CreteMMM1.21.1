@@ -1,8 +1,6 @@
 package net.MaouGaukken.CreateMechanisms.Compiler;
 
 import net.MaouGaukken.CreateMechanisms.AddonsMananger.SearchContent;
-import net.MaouGaukken.CreateMechanisms.Compiler.AddonsCompiler.SourceMechanismItem;
-import net.MaouGaukken.CreateMechanisms.Compiler.AddonsCompiler.ComputingMechanismItem;
 import net.MaouGaukken.CreateMechanisms.Compiler.Fluid.ModFluidItem;
 import net.MaouGaukken.CreateMechanisms.Config;
 import net.MaouGaukken.CreateMechanisms.CreateMechanisms;
@@ -24,7 +22,7 @@ public class ModTabs {
      * Mechanisms Tab: Contains various mechanical components used in the mod.
      * - Title: "item_group.createmechanisms.mechanisms" (translatable)
      * - Icon: Wooden Mechanism
-     * - Items: Various mechanical parts (wooden, rubber, advanced, heat, zinc, computing, and ender mechanisms)
+     * - Items: Various mechanical parts (wooden, rubber, advanced, heat, zinc, computing, and more...)
      */
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MECHANISMS = REGISTRY.register("mechanisms",
             () -> CreativeModeTab.builder()
@@ -34,28 +32,55 @@ public class ModTabs {
                         SearchContent search = new SearchContent();
                         AddonsIds ids = new AddonsIds();
                         tabData.accept(ModItems.WOODEN_MECHANISM.get());
-                        tabData.accept(ModItems.RUBBER_MECHANISM.get());
                         tabData.accept(ModItems.ADVANCED_PRECISION_MECHANISM.get());
-                        tabData.accept(ModItems.HEAT_MECHANISM.get());
                         tabData.accept(ModItems.ZINC_MECHANISM.get());
-                        tabData.accept(ModItems.ENDER_MECHANISM.get());
+                        tabData.accept(ModItems.ENDERIAM_MECHANISM.get());
                         tabData.accept(ModItems.REDSTONE_MECHANISM.get());
                         tabData.accept(ModItems.BASIC_ENERGY_MECHANISM.get());
                         tabData.accept(ModItems.IRON_ENERGY_MECHANISM.get());
                         tabData.accept(ModItems.GOLDEN_ENERGY_MECHANISM.get());
                         tabData.accept(ModItems.DIAMOND_ENERGY_MECHANISM.get());
+                        tabData.accept(ModItems.NETHERITE_ENERGY_MECHANISM.get());
                         tabData.accept(ModItems.ENDERIAM_ENERGY_MECHANISM.get());
-                        tabData.accept(ModItems.NETHERITE_ENERGY_MECHANISM);
-                        if(!Config.REQUIRES_ADDONS.get()){
-                            tabData.accept(ComputingMechanismItem.COMPUTING_MECHANISM.get());
-                            tabData.accept(SourceMechanismItem.SOURCE_MECHANISM.get());
-                        }else{
-                            if(ids._2() || ids._19() || ids._22()){
-                                tabData.accept(ComputingMechanismItem.COMPUTING_MECHANISM.get());
-                            }
-                            if(ids._3()){
-                                tabData.accept(SourceMechanismItem.SOURCE_MECHANISM.get());
-                            }
+                        tabData.accept(ModItems.LOGIC_MECHANISM.get());
+                        tabData.accept(ModItems.STORAGE_MECHANISM.get());
+                        tabData.accept(ModItems.COMPUTING_MECHANISM.get());
+                        tabData.accept(ModItems.ADVANCED_STORAGE_MECHANISM.get());
+                        tabData.accept(ModItems.ENDERIAM_STORAGE_MECHANISM.get());
+                        tabData.accept(ModItems.RUBBER_MECHANISM.get());
+                        tabData.accept(ModItems.FLUID_MECHANISM.get());
+                        tabData.accept(ModItems.ADVANCED_FLUID_MECHANISM.get());
+                        tabData.accept(ModItems.ENDERIAM_FLUID_MECHANISM.get());
+                        tabData.accept(ModItems.LOW_HEAT_MECHANISM.get());
+                        tabData.accept(ModItems.HEAT_MECHANISM.get());
+                        tabData.accept(ModItems.ADVANCED_HEAT_MECHANISM.get());
+                        tabData.accept(ModItems.ENDERIAM_HEAT_MECHANISM.get());
+                        if(Config.REQUIRES_ADDONS.get()){
+                            tabData.accept(ModItems.SOURCE_MECHANISM.get());
+                            tabData.accept(ModItems.BLOOD_MECHANISM.get());
+                            tabData.accept(ModItems.DARK_MECHANISM.get());
+                            tabData.accept(ModItems.SOUL_MECHANISM.get());
+                            tabData.accept(ModItems.PHYSICS_MECHANISM.get());
+                            tabData.accept(ModItems.NUCLEAR_MECHANISM.get());
+                            tabData.accept(ModItems.URANIUM_MECHANISM.get());
+                            tabData.accept(ModItems.SCULK_MECHANISM.get());
+                            tabData.accept(ModItems.EXPERIENCE_MECHANISM.get());
+                            tabData.accept(ModItems.ADVANCED_EXPERIENCE_MECHANISM.get());
+                            tabData.accept(ModItems.MENRIL_MECHANISM.get());
+                            tabData.accept(ModItems.FERRICORE_MECHANISM.get());
+                            tabData.accept(ModItems.BLAZEGOLD_MECHANISM.get());
+                            tabData.accept(ModItems.CELESTIGEM_MECHANISM.get());
+                            tabData.accept(ModItems.ECLIPSE_ALLOY_MECHANISM.get());
+                            tabData.accept(ModItems.HARDENED_ENERGY_MECHANISM.get());
+                            tabData.accept(ModItems.BLAZING_ENERGY_MECHANISM.get());
+                            tabData.accept(ModItems.NIOTIC_ENERGY_MECHANISM.get());
+                            tabData.accept(ModItems.SPIRITED_ENERGY_MECHANISM.get());
+                            tabData.accept(ModItems.NITRO_ENERGY_MECHANISM.get());
+                            tabData.accept(ModItems.LIGHT_MECHANISM.get());
+                            tabData.accept(ModItems.EQUIVALENCE_MECHANISM.get());
+                            tabData.accept(ModItems.VOID_MECHANISM.get());
+                            tabData.accept(ModItems.OTHER_MECHANISM.get());
+                            tabData.accept(ModItems.ATUNED_MECHANISM.get());
                         }
                     }).build());
 
@@ -73,11 +98,14 @@ public class ModTabs {
                     .displayItems((parameters, tabData) -> {
                         tabData.accept(ModItems.CURED_RUBBER.get());
                         tabData.accept(ModItems.RUBBER.get());
+                        tabData.accept(ModItems.CURED_ENDERIAM_RUBBER.get());
+                        tabData.accept(ModItems.ENDERIAM_RUBBER.get());
                         tabData.accept(ModItems.BRONZE.get());
                         tabData.accept(ModFluidItem.ENDERIAM_BUCKET.get());
                         tabData.accept(ModItems.COPPER_SAW.get());
                         tabData.accept(ModItems.IRON_SAW.get());
                         tabData.accept(ModItems.DIAMOND_SAW.get());
+                        tabData.accept(ModItems.NETHERITE_SAW.get());
                         tabData.accept(ModItems.ENERGY_CELL.get());
                         tabData.accept(ModItems.ENDERIAM_CELL.get());
                     })

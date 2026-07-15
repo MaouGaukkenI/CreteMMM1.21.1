@@ -1,6 +1,6 @@
 {
-  "parent" : "minecraft:item/generated",
-  "textures" : {
-    "layer0" : "createmechanisms:item/iron_energy_mechanism"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "createmechanisms:item/mechanism/iron_energy_mechanism" 
   }
 }

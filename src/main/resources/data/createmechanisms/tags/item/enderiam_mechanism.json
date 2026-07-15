@@ -1,0 +1,9 @@
+{
+  "values": [
+    "createmechanisms:enderiam_mechanism",
+    "createmechanisms:enderiam_energy_mechanism",
+    "createmechanisms:enderiam_storage_mechanism",
+    "createmechanisms:enderiam_fluid_mechanism",
+    "createmechanisms:enderiam_heat_mechanism"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "values": [
+    "createmechanisms:wooden_mechanism",
+    "createmechanisms:rubber_mechanism",
+    "createmechanisms:zinc_mechanism",
+    "createmechanisms:basic_energy_mechanism",
+    "createmechanisms:logic_mechanism",
+    "createmechanisms:low_heat_mechanism"
+  ]
+}

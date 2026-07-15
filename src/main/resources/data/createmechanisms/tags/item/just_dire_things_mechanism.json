@@ -1,0 +1,8 @@
+{
+  "values": [
+    "createmechanisms:ferricore_mechanism",
+    "createmechanisms:blazegold_mechanism",
+    "createmechanisms:celestigem_mechanism",
+    "createmechanisms:eclipse_alloy_mechanism"
+  ]
+}

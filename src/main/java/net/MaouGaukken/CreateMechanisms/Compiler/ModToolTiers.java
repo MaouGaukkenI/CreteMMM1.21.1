@@ -52,4 +52,18 @@ public class ModToolTiers {
             3500, 8.0F, 3.0F, 10,
             () -> Ingredient.of(new ItemLike[]{Items.DIAMOND})
     );
+
+    /**
+     * Modified Diamond tier with enhanced durability and efficiency.
+     * - Durability: 7000
+     * - Efficiency: 10.0F
+     * - Attack Damage: 5.0F
+     * - Enchantability: 10
+     * - Repair Material: NETHERITE_INGOT
+     */
+    public static final Tier MODIFIED_NETHERITE = new SimpleTier(
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            7000, 10.0F, 5.0F, 10,
+            () -> Ingredient.of(new ItemLike[]{Items.DIAMOND})
+    );
 }

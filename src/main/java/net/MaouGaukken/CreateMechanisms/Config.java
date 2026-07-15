@@ -6,7 +6,7 @@ public class Config {
     private static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
 
     public static final ModConfigSpec.BooleanValue REQUIRES_ADDONS = BUILDER
-            .comment("Habilitar dependência do addon na geração de mecanismos")
+            .comment("Enable addon dependency during mechanism generation")
             .define("enableAddonRequirement",true);
 
 

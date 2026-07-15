@@ -1,0 +1,8 @@
+{
+  "values": [
+    "createmechanisms:heat_mechanism",
+    "createmechanisms:low_heat_mechanism",
+    "createmechanisms:advanced_heat_mechanism",
+    "createmechanisms:enderiam_heat_mechanism"
+  ]
+}

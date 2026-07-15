@@ -157,8 +157,8 @@ dependencies {
     implementation 'com.moandjiezana.toml:toml4j:0.7.2'
 
     // JEI via CurseMaven
-    localRuntime "curse.maven:jei-238222:6829086"
-    compileOnly "curse.maven:jei-238222:6829086"
+    localRuntime "curse.maven:jei-238222:7057366"
+    compileOnly "curse.maven:jei-238222:7057366"
 
 
 

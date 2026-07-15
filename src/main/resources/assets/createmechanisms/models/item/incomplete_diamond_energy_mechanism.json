@@ -1,6 +1,0 @@
-{
-  "parent" : "minecraft:item/generated",
-  "textures" : {
-    "layer0" : "createmechanisms:item/incomplete_diamond_energy_mechanism"
-  }
-}

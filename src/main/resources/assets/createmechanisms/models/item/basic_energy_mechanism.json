@@ -1,6 +1,6 @@
 {
-  "parent" : "minecraft:item/generated",
-  "textures" : {
-    "layer0" : "createmechanisms:item/basic_energy_mechanism"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "createmechanisms:item/mechanism/basic_energy_mechanism" 
   }
 }

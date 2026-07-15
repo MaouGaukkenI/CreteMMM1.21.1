@@ -1,0 +1,7 @@
+{
+  "values": [
+    "createmechanisms:fluid_mechanism",
+    "createmechanisms:advanced_fluid_mechanism",
+    "createmechanisms:rubber_mechanism"
+  ]
+}

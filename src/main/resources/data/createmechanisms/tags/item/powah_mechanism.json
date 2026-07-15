@@ -1,0 +1,9 @@
+{
+  "values": [
+    "createmechanisms:hardened_energy_mechanism",
+    "createmechanisms:blazing_energy_mechanism",
+    "createmechanisms:niotic_energy_mechanism",
+    "createmechanisms:spirited_energy_mechanism",
+    "createmechanisms:nitro_energy_mechanism"
+  ]
+}
